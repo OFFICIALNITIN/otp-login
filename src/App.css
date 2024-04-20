@@ -1,0 +1,38 @@
+.App {
+  display: flex;
+  flex-direction: row;
+  font-family: sans-serif;
+  text-align: center;
+  justify-content: center;
+}
+
+.otpInput {
+  width: 40px;
+  height: 40px;
+  margin: 5px;
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+.otpForm {
+  background-color: rgba(155, 164, 245, 0.788);
+  border-radius: 20px;
+  border: 1px solid rgba(155, 245, 181, 0.788);
+  width: 400px;
+  height: 200px;
+}
+
+form input {
+  height: 25px;
+  width: 200px;
+  border: none;
+  margin: 5px;
+  border-radius: 5px;
+}
+
+form button {
+  border: none;
+  padding: 5px;
+  width: 50px;
+  border-radius: 5px;
+}
