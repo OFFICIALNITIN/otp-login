@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 
-const OTPInput = ({ length = 4, onOTPSubmit = () => {} }) => {
+const OTPInput = ({ length = 6, onOTPSubmit = () => {} }) => {
   const [otp, setOtp] = useState(new Array(length).fill(""));
   const inputRefs = useRef([]);
 
