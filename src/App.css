@@ -1,38 +1,113 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  width: 100%;
+  height: 100%;
+}
 .App {
+  width: 100vw;
+  height: 100vh;
+  font-family: sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.otpForm {
+  border-radius: 20px;
+  border: 2px solid rgba(155, 164, 245, 0.788);
+  box-shadow: 2px 3px 2px 1px rgba(95, 111, 254, 0.788);
+  width: 500px;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.otpForm h1 {
+  padding: 10px;
+  margin: 10px;
+  color: rgba(72, 88, 234, 0.932);
+}
+
+.otpInputForm {
   display: flex;
   flex-direction: row;
-  font-family: sans-serif;
-  text-align: center;
+  align-items: center;
   justify-content: center;
+  gap: 10px;
+}
+.EmailForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+p {
+  color: #1e4de9;
+}
+
+h3 {
+  color: rgb(37, 177, 6);
+  align-items: center;
 }
 
 .otpInput {
-  width: 40px;
-  height: 40px;
-  margin: 5px;
+  border: none;
+  background-color: white;
+  color: #1e4de9;
+  font-size: 32px;
   text-align: center;
-  font-size: 1.2rem;
+  width: 50px;
+  height: 50px;
+  border-radius: 4px;
+  outline: 2px solid rgb(123, 121, 121);
 }
 
-.otpForm {
-  background-color: rgba(155, 164, 245, 0.788);
-  border-radius: 20px;
-  border: 1px solid rgba(155, 245, 181, 0.788);
-  width: 400px;
-  height: 200px;
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
 }
 
 form input {
-  height: 25px;
-  width: 200px;
-  border: none;
+  height: 30px;
+  width: 300px;
   margin: 5px;
-  border-radius: 5px;
+  border: none;
+  border-bottom: 0.2em solid rgba(72, 88, 234, 0.932);
+  border-radius: 0.2em 0.2em 0 0;
+  padding: 0.4em;
+  color: #1e4de9;
+}
+
+form input:focus {
+  outline: none; /* Remove the default outline */
 }
 
 form button {
-  border: none;
-  padding: 5px;
-  width: 50px;
+  align-items: center;
+  appearance: none;
+  border: 0.2em solid #1e4de9;
+  background: hsl(0 0 0/0);
+  padding: 0.85em 1.5em;
+  color: #1e4de9;
+  border-radius: 2em;
+  transition: 0.5s;
+  width: 100px;
   border-radius: 5px;
+  &:hover,
+  &:focus,
+  &:active {
+    background: #1e4de9;
+    color: #fff;
+  }
 }

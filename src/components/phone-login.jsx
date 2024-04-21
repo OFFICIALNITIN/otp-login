@@ -5,6 +5,7 @@ import axios from "axios";
 const PhoneOtpForm = () => {
   const [email, setEmail] = useState();
   const [showOtpInput, setShowOtpInput] = useState(false);
+  const [verified, setVerified] = useState(false);
 
   const handlePhoneNumber = (e) => {
     setEmail(e.target.value);
@@ -42,6 +43,7 @@ const PhoneOtpForm = () => {
         otp: otp,
       });
       console.log(res.data, "Login successfull!");
+      setVerified(true);
     } catch (error) {
       console.log(error);
     }
@@ -62,9 +64,23 @@ const PhoneOtpForm = () => {
           <button type="submit">Submit</button>
         </form>
       ) : (
-        <div>
-          <p>Enter OTP sent to {email}</p>
-          <OTPInput length={6} onOTPSubmit={onOTPSubmit} />
+        <div className="EmailForm">
+          {!verified ? (
+            <div>
+              <p>Enter OTP sent to {email}</p>
+              <OTPInput length={6} onOTPSubmit={onOTPSubmit} />
+            </div>
+          ) : (
+            <div>
+              <h3 className="verified">Verified</h3>
+              <img
+                width="48"
+                height="48"
+                src="https://img.icons8.com/color/48/verified-account--v1.png"
+                alt="verified-account--v1"
+              />
+            </div>
+          )}
         </div>
       )}
     </div>

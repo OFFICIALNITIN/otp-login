@@ -52,7 +52,7 @@ const OTPInput = ({ length = 6, onOTPSubmit = () => {} }) => {
   };
 
   return (
-    <div>
+    <div className="otpInputForm">
       {otp.map((value, index) => {
         return (
           <input
